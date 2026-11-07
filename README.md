@@ -1,61 +1,75 @@
 # inDM
 
-**Every comment, story reply, and DM — turned into growth, automatically. The Instagram engine for creators who mean business.**
+**Instagram DM automation for creators, marketing-led businesses and the agencies that run their accounts.** Someone comments a keyword on your post or reel, replies to your story, or sends you a word by DM, and inDM sends them your link by DM in seconds, in your words.
 
-[Start free →](https://indm.social)
+[Start free](https://indm.social) · [Pricing](https://indm.social/pricing) · [API docs](https://docs.indm.social)
 
 ---
 
 ## What it does
 
-Your audience is already talking to you — comments, story replies, DMs. Most of it slips away, not because you're failing, but because no one can answer that volume by hand. inDM is Instagram DM and comment automation that turns that attention into conversations, followers, and sales, anchored to your real posts instead of an abstract flowchart.
+- **Comment-to-DM on posts and reels.** Someone comments your keyword and gets a DM with your link, while they are still reading.
+- **Story reply and keyword DM automations.** A story reply or a word sent by DM starts the same conversation.
+- **Public comment replies,** posted under the comment once the DM has gone out.
+- **A follow gate and an email capture gate** on any link.
+- **Analytics** for every automation, with its journey and funnel.
+- **A unified inbox and contacts,** with export. Your audience is yours.
+- **A live preview** of the exact DM before anything goes out.
 
-- **Comment-to-DM automation** — someone comments a keyword on your post or reel, they instantly get a DM with your link.
-- **Story reply automation** — a story reply becomes a tracked lead, automatically.
-- **Follow-to-unlock** — gate a link behind a follow to grow your following with every send.
-- **Automation analytics** — see how each automation is doing: trigger rate, where people fall off, which keyword and post drive it.
-- **Contacts** — a light CRM that captures leads, hot leads, and customers as they come in, with email capture and export.
-- **Unified inbox** — every conversation your automations create, in one place.
+inDM connects an Instagram Business or Creator account through Instagram's own login, with no password shared. It is an approved Meta Tech Provider, and every message goes through Instagram's official API.
 
-Connects to an Instagram Business or Creator account through Meta's official login (inDM is a verified Meta Tech Provider).
+## Build on it: the inDM API
 
-## Who it's for
+inDM has a public REST API at `https://api.indm.social/v1`, on every plan, Free included. Your own script, dashboard or CRM can:
 
-Built for creators (the beachhead: newer creators, roughly 1,000–3,000 followers, posting consistently) and marketing-led businesses — ecommerce and B2C SaaS — turning content and ads into conversations.
+- see the workspace and every Instagram account connected to it, with each account's health;
+- list the posts and reels inDM has synced, and fetch new ones now, so a reel posted a minute ago is ready to automate;
+- create a comment-to-DM automation on a post (it starts as a draft), check it, and edit it;
+- set it live or pause it;
+- read its totals: how many times it fired, and how many messages were sent, failed or are still waiting.
 
-## How it compares
+You create API keys in inDM under **Settings → API keys**, either read-only or with full access, and each one expires after 30, 90 or 365 days, or never. One key reads every Instagram account in the workspace, which is what an agency running many clients needs. Your plan's limits apply through the API exactly as they do in the app.
 
-| Tool | Pricing model | Built for | Where it differs from inDM |
-|---|---|---|---|
-| **ManyChat** | Per active contact | Multi-channel marketers | Costs scale with your contact list, not your usage; a broader flow-builder to learn |
-| **CreatorFlow** | Per DM sent (every outbound DM counts, including repeats) | Instagram creators | Billing punishes the exact moment — a post going viral — that should be a win |
-| **Inflowave** | Seat / CRM pricing | High-ticket sales teams | A full sales pipeline bolted onto automation — more than most creators need |
+```bash
+curl https://api.indm.social/v1/workspace \
+  -H "Authorization: Bearer $INDM_API_KEY"
+```
 
-inDM prices on DMs sent, not on how many contacts you've built: a free trial with 1,000 DMs to try every automation type, then one flat plan — no per-contact math, no tiered ladder to decode.
+The full reference, with a playground, is at **[docs.indm.social](https://docs.indm.social)**. [What the API is for](https://indm.social/instagram-automation-api) explains it without the code.
+
+## Use it from ChatGPT
+
+inDM is in ChatGPT's plugin directory, on every plan. Install it from the Plugins page, sign in to inDM, and draft, check and set live comment-to-DM automations by asking. Nothing sends through ChatGPT: your automations send the words you approved. [How inDM works in ChatGPT](https://indm.social/instagram-mcp).
 
 ## Pricing
 
-| Plan | Price | Includes |
-|---|---|---|
-| **Free trial** | $0, no card | 1,000 DMs · every automation type · unified inbox & contacts |
-| **Growth** | $9.99/month | 10,000 DMs/month, then $1 per extra 1,000 · unlimited automations & keywords · follower & email gates · full analytics |
+Nothing is metered on any plan: no message allowance and no contact allowance.
+
+| Plan | Price | Instagram accounts | What it includes |
+|---|---|---|---|
+| **Free** | $0, no card, no expiry | 1 | Unlimited messages, every automation type, both gates, analytics, the inbox, contacts, the API and the ChatGPT plugin |
+| **Growth** | 7 days free, then $14.99 a month | Up to 5 | Everything in Free. Removes app branding, lifts the automation limit, adds up to 3 links in one automation, a follow-up message, broadcasts, your whole team, and who clicked your links |
+| **Agency Lite** | $39 a month | Up to 15 | Everything in Growth, in one workspace |
+| **Agency Pro** | $99 a month | 30, then $3 a month for each one after | Everything in Growth, with a dedicated account manager |
+
+Prices change, and [the pricing page](https://indm.social/pricing) is the one that applies.
 
 ## FAQ
 
 **What is Instagram DM automation?**
-Software that watches your Instagram comments, story replies, and DMs and responds automatically — sending a link, starting a conversation, or capturing a lead — the instant someone engages, instead of hours later by hand.
+Software that answers your Instagram comments, story replies and DMs for you, sending a link, starting a conversation or capturing a lead the moment someone engages, instead of hours later by hand.
 
 **How do I turn Instagram comments into DMs automatically?**
-Set a keyword on a post or reel; when someone comments it, they get a DM with your link right away. That's the core comment-to-DM automation in inDM.
+Set a keyword on a post or reel. When someone comments it, they get a DM with your link right away. That is the core comment-to-DM automation in inDM, and it runs free.
 
-**Is there a ManyChat alternative built for creators, not marketers?**
-inDM is Instagram-only, priced on DMs sent instead of total contacts, and anchored directly to your posts, reels, and stories rather than a general-purpose flow-builder.
+**Does inDM have an API?**
+Yes, on every plan, Free included. The public API at `https://api.indm.social/v1` lists your posts, creates comment-to-DM automations on them, sets them live or pauses them, and reads their totals. Keys are created in Settings, read-only or with full access. The reference is at [docs.indm.social](https://docs.indm.social).
 
-**What's the difference between inDM and CreatorFlow?**
-Both are Instagram-first, but CreatorFlow bills every outbound DM, including repeats to the same person. inDM's plan is built around usage that scales with your growth, not against it.
+**Can an agency run many clients' accounts on one subscription?**
+Yes. Agency Lite holds up to 15 Instagram accounts in one workspace for $39 a month, and Agency Pro holds 30 for $99 a month, then $3 a month for each one after. Clients connect their own accounts from a link the agency sends, without sharing a password.
 
-**Does inDM work with Instagram Stories and comments, not just DMs?**
-Yes — automations can trigger from post/reel comments, story replies, or DM keywords, and each one gets its own analytics.
+**How does inDM compare with other tools?**
+[The best Instagram DM automation tools, compared](https://indm.social/best-instagram-dm-automation-tool) sets them side by side, and there is a page for each one we track, such as [inDM vs ManyChat](https://indm.social/compare/manychat).
 
 ---
 
